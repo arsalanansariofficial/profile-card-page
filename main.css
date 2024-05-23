@@ -51,7 +51,7 @@ main {
       transform: translateX(-25%) translateY(-50%);
     }
   }
-  
+
   & > .bg-bottom {
     transform: translateX(50%) translateY(50%);
 
@@ -69,6 +69,8 @@ main {
   overflow: clip;
   z-index: 1;
   position: relative;
+  scale: 0;
+  animation: appear 500ms ease-in-out forwards;
 }
 
 .profile_header {
@@ -125,4 +127,16 @@ main {
   color: var(--Dark-grayish-blue);
   font-weight: 400;
   font-size: 0.75rem;
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
 }
